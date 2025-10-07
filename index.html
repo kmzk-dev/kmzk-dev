@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV.FILLMEE.COM - 開発が、私と、世界を満たす。</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (オプション) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- 【外部ファイル化】カスタムCSSの読み込み -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ヒーローセクション/理念 (#mission) -->
+    <section id="mission" class="hero-section text-center">
+        <div class="container">
+            <div class="logo-placeholder mb-4">
+                <!-- ロゴ画像 (パスをassets直下に変更) -->
+                <img src="assets/img/logo_w.jpg" alt="undefine" class="hero-logo">
+            </div>
+            
+            <h1 class="display-3 fw-bold mb-3">DEV.FILLMEE.COM</h1>
+            <p class="lead mb-4 fs-4">開発が、私と、世界を満たす。</p>
+            
+            <p class="mx-auto fs-6" style="max-width: 600px;">
+                ドメイン名「DEV.FILLMEE.COM」に込められた意味は、**開発（チャレンジ）が関わる全ての人々（ME）を満たす（FILL）**ということです。<br>
+                私が新しい知識欲・向上心を満たし、お客様の要望を満たす。<br>
+                双方がワクワクするプロジェクトを追求します。
+            </p>
+            <a href="#contact" class="btn btn-warning btn-lg fw-bold mt-4 shadow-lg">まずはご相談ください</a>
+        </div>
+    </section>
+
+    <!-- ナビゲーションバー (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#mission">
+                <!-- ロゴ画像 (パスをassets直下に変更) -->
+                <img src="assets/img/logo_b.jpg" alt="" class="navbar-logo">
+                <span class="ms-2 fw-bold text-primary">DEV.FILLMEE.COM</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#services"><i class="bi bi-gear me-1"></i>Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="bi bi-code-slash me-1"></i>Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#price"><i class="bi bi-cash me-1"></i>Price</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products"><i class="bi bi-journals me-1"></i>Products</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-sm btn-outline-primary ms-lg-2" href="#contact"><i class="bi bi-send me-1"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 提供できるもの (#services) -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold text-primary">Services</h2>
+            <div class="text-center section-title-deco"></div>
+            
+            <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+                <h4 class="alert-heading fw-bold">「ITボトルネック」を解消し、DXを軌道に乗せる。</h4>
+                <p class="mb-1">
+                    IT人材が不足している、または外部ベンダーとのコミュニケーションに課題を抱える中小・中堅企業様に対し、技術とビジネス双方の観点からプロジェクトを推進します。
+                </p>
+                <p class="fw-bold mb-0 text-dark">
+                    私が提供するのは、**「適切な判断」**と**「実行可能なアクションプラン」**です。
+                </p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card card-service h-100 p-3">
+                        <div class="card-body">
+                            <i class="bi bi-lightbulb-fill fs-2 text-info mb-3"></i>
+                            <h5 class="card-title fw-bold">新規プロダクトのベンダー発注前コンサルティング</h5>
+                            <p class="card-text text-muted">
+                                要件定義の支援、RFP（提案依頼書）作成のサポート、ベンダー選定における技術的な評価観点の提供など、初期段階での失敗を未然に防ぎます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-service h-100 p-3">
+                        <div class="card-body">
+                            <i class="bi bi-sliders fs-2 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">SaaSシステム利活用コンサルティング</h5>
+                            <p class="card-text text-muted">
+                                Slack, Salesforce, Google Workspaceなどの導入済みシステムのポテンシャルを最大限に引き出し、より深い業務連携や自動化の実現方法を提示します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-service h-100 p-3">
+                        <div class="card-body">
+                            <i class="bi bi-people-fill fs-2 text-warning mb-3"></i>
+                            <h5 class="card-title fw-bold">非IT職向け DXプロジェクト プロセス支援</h5>
+                            <p class="card-text text-muted">
+                                IT部門を持たない、または専門知識が不足しているチームに対し、無理のない範囲でのDX推進ロードマップ策定と実行プロセスのサポートを行います。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-service h-100 p-3">
+                        <div class="card-body">
+                            <i class="bi bi-eye-fill fs-2 text-danger mb-3"></i>
+                            <h5 class="card-title fw-bold">開発チームの外部オブザーバー</h5>
+                            <p class="card-text text-muted">
+                                貴社開発チームの会議やレビューに参加し、技術的な中立性を持ったアドバイスや、最新のAI駆動型開発手法導入に向けたフィードバックを提供します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="text-muted small">※初期モデルの設計・構築も可能ですが、その場合は別途、時間無制限の個別見積もりとなります。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 私が保有する技術 (#skills) - タブ、グリッドに整理 -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="text-center fw-bold text-primary">Development Skill</h2>
+            <div class="text-center section-title-deco"></div>
+
+            <!-- 開発スタイル (AIポリシー) -->
+            <div class="mx-auto" style="max-width: 800px;">
+                <div class="mb-5">
+                <h5 class="text-center"><i class="bi bi-cpu-fill me-2"></i>生成AIとのチームプレイ</h5>
+                <p class="mb-2 mt-2">
+                    私のプロダクトでは開発全体の約8割のコーディングをAIが担当しています。<BR>私は的確なプロンプト、コードレビュー、ロジック設計に集中することで、高い生産性を実現していることをご理解ください。
+                    </p>
+                </div>
+                <div class="my-5">
+                <h6 class="fw-bold text-center my-3">AI利用ポリシー (お客様への提供責任)</h6>
+                <ul class="list-unstyled small ms-3">
+                    <li><i class="bi bi-check-circle-fill text-success me-1"></i> AIが提供するコードや技術は、必ず私がレビューしてから顧客に提供します。</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-1"></i> AIが提供するコード・技術の採用は、私が単独で実装できる、または説明できるものに限ります。</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-1"></i> 私自身の能力や理解度を超えたAIの使い方はしません。</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- 1. 主要プラットフォーム・連携技術 (タブコンポーネント) -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h5 class="mb-4 text-secondary border-bottom pb-2 text-center">主要プラットフォーム</h5>
+
+                    <!-- モバイルでも中央寄せ・折り返し可能なタブ -->
+                    <ul class="nav nav-tabs justify-content-center" id="platformTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="slack-tab" data-bs-toggle="tab" data-bs-target="#slack" type="button" role="tab" aria-controls="slack" aria-selected="true"><i class="bi bi-slack me-1"></i> Slack</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="salesforce-tab" data-bs-toggle="tab" data-bs-target="#salesforce" type="button" role="tab" aria-controls="salesforce" aria-selected="false"><i class="bi bi-lightning-fill text-warning me-1"></i> Salesforce</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="googlecloud-tab" data-bs-toggle="tab" data-bs-target="#googlecloud" type="button" role="tab" aria-controls="googlecloud" aria-selected="false"><i class="bi bi-google text-success me-1"></i> Google/GCP</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab" aria-controls="web" aria-selected="false"><i class="bi bi-globe me-1"></i> Web/API</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="extension-tab" data-bs-toggle="tab" data-bs-target="#extension" type="button" role="tab" aria-controls="extension" aria-selected="false"><i class="bi bi-puzzle-fill me-1"></i> 拡張機能</button>
+                        </li>
+                    </ul>
+
+
+                    <div class="tab-content border border-top-0 bg-white tab-content-card shadow-sm" id="platformTabsContent">
+                        
+                        <!-- Slackタブ -->
+                        <div class="tab-pane fade show active" id="slack" role="tabpanel" aria-labelledby="slack-tab">
+                            <h5 class="fw-bold text-primary mb-3">Slack連携・業務アプリ構築</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i> **カスタムワークフロー開発:** 複雑な承認フロー、情報収集を自動化するSlack Appを構築。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i> **外部SaaS連携:** SalesforceやGWSとのデータ連携APIを実装し、Slack上での情報更新・確認を可能にします。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i> **技術スタック:** Deno Slack SDK (TypeScript) を主体に、高速で安定したアプリを提供。</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Salesforceタブ -->
+                        <div class="tab-pane fade" id="salesforce" role="tabpanel" aria-labelledby="salesforce-tab">
+                            <h5 class="fw-bold text-primary mb-3">Salesforceの機能拡張と自動化</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-arrow-right-circle-fill text-warning me-2"></i> **ノーコード自動化 (Flow主体):** 可能な限りFlow Builderを使い、保守性の高いワークフローを構築。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-warning me-2"></i> **APEXによるロジック拡張:** Flowでは難しい高度なビジネスロジックや、大量データ処理をAPEXで実現。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-warning me-2"></i> **外部システム連携:** Salesforceを起点または終点とするデータ連携API（REST/SOAP）を構築。</li>
+                            </ul>
+                        </div>
+
+                        <!-- Google Cloud / GWSタブ -->
+                        <div class="tab-pane fade" id="googlecloud" role="tabpanel" aria-labelledby="googlecloud-tab">
+                            <h5 class="fw-bold text-primary mb-3">Google Workspace連携とクラウドAPI開発</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-arrow-right-circle-fill text-success me-2"></i> **GWS自動化 (GAS):** Google Apps Script (GAS) を利用したスプレッドシートやGmail連携の自動化。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-success me-2"></i> **GCP / Cloud Run:** Google Cloud Run Function (Python) を利用し、スケーラブルで安価な中継APIを構築。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-success me-2"></i> **コスト最適化:** 適切なプラットフォーム選定により、サーバー維持コストを最小限に抑えます。</li>
+                            </ul>
+                        </div>
+
+                        <!-- ブラウザ拡張機能タブ -->
+                        <div class="tab-pane fade" id="extension" role="tabpanel" aria-labelledby="extension-tab">
+                            <h5 class="fw-bold text-primary mb-3">ブラウザ拡張機能による業務改善</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-arrow-right-circle-fill text-secondary me-2"></i> **Webサイトの機能拡張:** 既存の社内WebシステムやSaaSのインターフェースに、カスタムボタンや情報表示などの機能を追加。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-secondary me-2"></i> **データ収集・自動入力:** ブラウザ上の特定情報（テーブルデータなど）を自動収集し、別のフォームやAPIに送信する処理を自動化。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-secondary me-2"></i> **対応ブラウザ:** Chrome、Edge、Firefoxなどの主要なモダンブラウザに対応した機能を提供。</li>
+                            </ul>
+                        </div>
+
+                        <!-- Web / APIタブ -->
+                        <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
+                            <h5 class="fw-bold text-primary mb-3">軽量なWebアプリケーションとAPI構築</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-arrow-right-circle-fill text-secondary me-2"></i> **プロトタイプ・モックアップ:** HTML/CSS/JS (Bootstrap) やPHPを利用し、迅速に動作するWebプロトタイプを開発。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-secondary me-2"></i> **中継・トリガーAPI:** 複数のSaaS間を連携させるための軽量なAPIをレンタルサーバー（PHP）やGCPで構築。</li>
+                                <li><i class="bi bi-arrow-right-circle-fill text-secondary me-2"></i> **個人用モバイルアプリ (Flutter):** 個人利用でのモバイルアプリ開発経験に基づく、UI/UX設計の知見を提供。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2. 主要言語・開発フレームワーク (バッジリスト) -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <h4 class="mb-4 text-secondary border-bottom pb-2 text-center">主要言語・開発フレームワーク</h4>
+                    <p class="text-center text-muted mb-4">コアとなる言語・フレームワークをバッジで詳細に表示します。</p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <!-- Python系 (bg-info: 青系) -->
+                        <span class="badge text-bg-info py-2 px-3 fw-normal">Python</span>
+                        <span class="badge text-bg-info py-2 px-3 fw-normal">Python/Flask</span>
+                        <span class="badge text-bg-info py-2 px-3 fw-normal">Python/FastAPI</span>
+
+                        <!-- JavaScript/TypeScript系 (bg-success: 緑系) -->
+                        <span class="badge text-bg-success py-2 px-3 fw-normal">TypeScript</span>
+                        <span class="badge text-bg-success py-2 px-3 fw-normal">TypeScript/React</span>
+                        <span class="badge text-bg-success py-2 px-3 fw-normal">TypeScript/DenoSlackSDK</span>
+                        <span class="badge text-bg-success py-2 px-3 fw-normal">JavaScript (GAS含む)</span>
+                        
+                        <!-- PHP系 (bg-primary: 濃い青系) -->
+                        <span class="badge text-bg-primary py-2 px-3 fw-normal">PHP</span>
+                        <span class="badge text-bg-primary py-2 px-3 fw-normal">PHP/Laravel</span>
+                        
+                        <!-- モバイル/その他 (bg-warning: 黄色系) -->
+                        <span class="badge text-bg-warning text-dark py-2 px-3 fw-normal">Dart</span>
+                        <span class="badge text-bg-warning text-dark py-2 px-3 fw-normal">Dart/Flutter</span>
+                        
+                        <!-- Salesforce (bg-danger: 赤系) -->
+                        <span class="badge text-bg-danger py-2 px-3 fw-normal">APEX</span>
+
+                        <!-- フロントエンド/UI (bg-secondary: グレー系) -->
+                        <span class="badge text-bg-secondary py-2 px-3 fw-normal">HTML / CSS</span>
+                        <span class="badge text-bg-secondary py-2 px-3 fw-normal">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="price" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold text-primary">Price</h2>
+            <div class="text-center section-title-deco"></div>
+            
+            <p class="text-center lead mb-5 mx-auto" style="max-width: 700px;">
+                IT課題の緊急度や予算に応じて選べる、2つのコンサルティングパッケージをご用意しました。
+            </p>
+            <div class="row justify-content-center g-4">
+                
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 shadow-lg border-2 border-info">
+                        <div class="card-header text-center bg-info text-white py-3">
+                            <h4 class="my-0 fw-bold">単発スポットコンサルティング</h4>
+                            <p class="mb-0 small">緊急の課題解決、初回のお試しに</p>
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                <h1 class="display-5 fw-bold text-info me-2">¥--,---</h1>
+                                <span class="text-muted small">（税別・固定料金）</span>
+                            </div>
+                            <h5 class="fw-bold mb-3 border-bottom pb-2">サービス内容（1回）</h5>
+                            <ul class="list-unstyled text-start small mx-auto" style="max-width: 250px;">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i> **1回**のオンラインセッション（最大2時間）</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i> 最優先課題のヒアリングと解決策の提示</li>
+                                <li class="mb-2"><i class="bi bi-x-circle-fill text-muted me-2"></i> 継続的な進捗管理サポートは含みません</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-lg btn-info w-100 mt-4">単発で相談する</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 shadow-lg border-2 border-primary">
+                        <div class="card-header text-center bg-primary text-white py-3">
+                            <h4 class="my-0 fw-bold">集中課題解決パッケージ</h4>
+                            <p class="mb-0 small">DX推進、複数部門にまたがるボトルネック解消に</p>
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                <h1 class="display-5 fw-bold text-primary me-2">¥--,---</h1>
+                                <span class="text-muted small">（税別・固定料金）</span>
+                            </div>
+                            <h5 class="fw-bold mb-3 border-bottom pb-2">サービス内容（5回セット）</h5>
+                            <ul class="list-unstyled text-start small mx-auto" style="max-width: 250px;">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> **計5回**のオンラインセッション（最大10時間）</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 課題のドキュメント化とロードマップ作成サポート</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> セッション後の簡単なメールサポート（2週間まで）</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-lg btn-primary w-100 mt-4">5回セットで申し込む</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading fw-bold"><i class="bi bi-tools me-2"></i>開発作業（Web API/システム構築）の料金</h4>
+                        <p class="mb-0">Web API構築、Slack App開発などの**開発作業を伴う個別プロジェクト**は、上記コンサルティングパッケージとは異なり、プロジェクトの規模や期間に応じて**別途個別にお見積もり**となります。まずはご相談ください。</p>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading fw-bold"><i class="bi bi-tools me-2"></i>料金表記について</h4>
+                        <p class="mb-0">現在価格調整中です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プロダクト事例 (#products) -->
+    <section id="products" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold text-primary">Public Products </h2>
+            <div class="text-center section-title-deco"></div>
+
+            <div class="text-center mb-3">
+                <p class="text-muted">活動の一部をGITHUBやnoteでご覧いただけます。<BR>このセクションは新しいウインドウで別ページを開きます</p>
+            </div>
+            
+            <div id="github-repos" class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-12 loading-placeholder">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="ms-3 text-muted">GitHubリポジトリ情報を読み込み中...</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-md-6"> <div class="text-center mt-5">
+                        <a href="https://github.com/kmzk-dev" target="_blank" class="btn btn-primary btn-lg w-100">GitHubプロフィール全体を見る</a>
+                    </div>
+                    <div class="text-center mt-2">
+                        <a href="https://note.com/fillmee" target="_blank" class="btn btn-outline-primary btn-lg w-100">Noteクリエーターページ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 問い合わせフォーム (#contact) -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold text-primary">Contact</h2>
+            <div class="text-center section-title-deco"></div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <!-- フォームを一時的に無効化し、代替の連絡方法を案内するアラート -->
+                    <div class="alert alert-warning mb-4">
+                        <i class="bi bi-shield-fill-exclamation me-2"></i> 
+                        **現在、フォームは一時的に無効化されています。** ドメイン接続後のロボット防御実装のため、現在は本ページ最下部のX (旧Twitter) DMからご連絡ください。
+                    </div>
+                    
+                    <p class="text-center text-muted mb-4">お客様のご要望と私のチャレンジが重なるプロジェクトを楽しみにしています。まずはご相談内容をお聞かせください。</p>
+                    
+                    <form>
+                        <fieldset disabled>
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label"><i class="bi bi-person me-1"></i> お名前（会社名）</label>
+                                <input type="text" class="form-control" id="contactName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label"><i class="bi bi-envelope me-1"></i> メールアドレス</label>
+                                <input type="email" class="form-control" id="contactEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactSubject" class="form-label"><i class="bi bi-tag me-1"></i> 件名</label>
+                                <input type="text" class="form-control" id="contactSubject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label"><i class="bi bi-chat-left-text me-1"></i> メッセージ本文（ご相談内容）</label>
+                                <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">送信する</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター (Footer) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-2 mb-md-0">&copy; 2025 DEV.FILLMEE.COM All rights reserved.</p>
+                
+                <div class="footer-social">
+                    <a href="https://x.com/env_k_k" target="_blank" title="X (Twitter)" class="me-3 fs-4"><i class="bi bi-twitter"></i></a>
+                    <a href="https://github.com/kmzk-dev" target="_blank" title="GitHub" class="me-3 fs-4"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JSバンドル -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 【外部ファイル化】カスタムJavaScriptの読み込み -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

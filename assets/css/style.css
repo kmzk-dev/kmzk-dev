@@ -1,0 +1,138 @@
+/* ==================================== */
+/* 1. 基本設定とフォント */
+/* ==================================== */
+body {
+    /* 'Inter'を優先的に使用 */
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8f9fa; 
+    color: #343a40; /* 基本のテキストカラー */
+}
+
+/* セクション間の余白を調整 (paddingを少し大きく) */
+.section-padding {
+    padding: 6rem 0; /* 以前の5remから変更 */
+}
+h2 {
+    font-size: 2.5rem; /* セクションタイトルのフォントサイズを固定 */
+    font-weight: 800; /* 強調 */
+    margin-bottom: 0 !important; /* H2自体の下マージンをリセット */
+}
+h5 {
+    font-weight: 700;
+}
+
+/* ==================================== */
+/* 1.5. H2セクションデコレーションの追加 */
+/* ==================================== */
+/* 全てのセクションタイトルH2の直下でこの要素を呼び出すことで統一的な装飾を実現 */
+.section-title-deco {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem; /* 装飾の下部に余裕を持たせる */
+}
+.section-title-deco::after {
+    content: '';
+    display: block;
+    width: 80px; /* 線の長さ */
+    height: 4px;
+    background-color: #3b82f6; /* プライマリカラー */
+    border-radius: 2px;
+    margin: 0.5rem auto 0; /* 線とH2の間に少し隙間、中央寄せ */
+}
+
+/* ==================================== */
+/* 2. ヒーローセクション */
+/* ==================================== */
+.hero-section {
+    height: 100vh;
+    min-height: 600px; /* 最小高さを調整 */
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero-logo {
+    width: 120px; /* ロゴサイズを微調整 */
+    height: 120px; 
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* 影を強調 */
+}
+.display-3 {
+    font-size: 3.5rem;
+}
+
+/* ==================================== */
+/* 3. コンポーネントの共通スタイル */
+/* ==================================== */
+.card-service {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* 影を少し濃く */
+}
+.card-service:hover {
+    transform: translateY(-8px); /* 浮き上がりを強調 */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* GitHubカードのスタイル */
+.github-card {
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.3s;
+}
+.github-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================== */
+/* 4. タブ・モバイル表示のスタイル */
+/* ==================================== */
+.tab-content-card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+    padding: 2.5rem; /* パディングを増やす */
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    flex-wrap: wrap; 
+}
+
+/* モバイル時のタブアイテムの幅調整 (5項目を2列x3行に配置) */
+@media (max-width: 767.98px) { /* mdブレークポイント以下で適用 */
+    .nav-tabs .nav-item {
+        flex: 0 0 50%; /* 2列表示 */
+        text-align: center;
+        margin-bottom: 0.5rem; /* 行間の余白を追加 */
+    }
+    .nav-tabs .nav-link {
+        display: block;
+        width: 100%; 
+        padding: 0.5rem 0.25rem; /* モバイルでのパディング調整 */
+    }
+}
+@media (min-width: 768px) {
+    .nav-tabs .nav-link {
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+/* ナビゲーションロゴ */
+.navbar-logo {
+    width: 38px; /* ナビゲーションロゴサイズを微調整 */
+    height: 38px; 
+    object-fit: cover; 
+    clip-path: circle(50% at 50% 50%); 
+}
+
+/* 不要な古いCSSの削除を反映 */
+.platform-item:hover { background-color: #e9ecef; }
+.platform-icon { font-size: 2.5rem; color: #1e3a8a; }
+.logo-placeholder { background-color: transparent; padding: 0; }
+.language-item { /* バッジ化したため不要だが、定義はそのまま残しておく */ }
