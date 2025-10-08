@@ -136,3 +136,18 @@ h5 {
 .platform-icon { font-size: 2.5rem; color: #1e3a8a; }
 .logo-placeholder { background-color: transparent; padding: 0; }
 .language-item { /* バッジ化したため不要だが、定義はそのまま残しておく */ }
+
+/* プライバシーポリシーの追従ボタン */
+.fab-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; /* 常に最前面に表示 */
+}
