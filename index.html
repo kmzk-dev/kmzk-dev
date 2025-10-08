@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <section id="mission" class="hero-section text-center">
@@ -375,75 +376,62 @@
             </p> 
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="alert alert-warning mb-4">
-                        <i class="bi bi-shield-fill-exclamation me-2"></i> 
-                        **現在、フォームは一時的に無効化されています。** ドメイン接続後のロボット防御実装のため、現在は本ページ最下部のX (旧Twitter) DMからご連絡ください。
-                    </div>
-        <form id="contact-form" class="row g-3 mx-auto needs-validation" method="POST" action="#" novalidate>
-            <fieldset disabled>
-                <div class="col-12">
-                    <div class="alert alert-warning small py-2 px-3">
-                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                        <a href="privacy.html" target="_blank" class="alert-link fw-bold">プライバシーポリシー（別ウインドウが開きます）</a>をご確認の上、ご同意いただける場合のみお問い合わせください。
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="privacyConsent" required>
-                        <label class="form-check-label small" for="privacyConsent">
-                            プライバシーポリシーに同意します
-                        </label>
-                        <div class="invalid-feedback">同意が必要です。</div>
-                    </div>
-                </div>
+                    <form id="contact-form" class="row g-3 mx-auto needs-validation" method="POST" 
+                    action="http://fillmee.bambina.jp/api/from-githubpages/dev-fillmee-mailsend-api.php" novalidate>
+                        <div class="col-12">
+                            <div class="alert alert-warning small py-2 px-3">
+                                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                                <a href="privacy.html" target="_blank" class="alert-link fw-bold">プライバシーポリシー（別ウインドウが開きます）</a>をご確認の上、ご同意いただける場合のみお問い合わせください。
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input js-consent-check" type="checkbox" id="privacyConsent" required>
+                                <label class="form-check-label small" for="privacyConsent">
+                                    プライバシーポリシーに同意します
+                                </label>
+                                <div class="invalid-feedback">同意が必要です。</div>
+                            </div>
+                        </div>
 
-                <div class="col-12 mb-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="recaptchaPlaceholder" required>
-                        <label class="form-check-label small" for="recaptchaPlaceholder">
-                            私はロボットではありません (reCAPTCHAプレースホルダー)
-                        </label>
-                        <div class="invalid-feedback">ロボット検証を完了してください。</div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <label for="inputName" class="form-label small">お名前 <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="inputName" placeholder="山田 太郎" required>
-                    <div class="invalid-feedback">お名前を入力してください。</div>
-                </div>
+                        <div class="col-12 mb-3">
+                            <div class="g-recaptcha" data-sitekey="6LfiPeIrAAAAAEasdYDTJ3JruituyplArcFJvl9e" 
+                                data-callback="enableForm" data-expired-callback="disableForm">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label small">お名前 <span class="text-danger">*</span></label>
+                            <input value="デバッグ用" "text" class="form-control js-conditional-input" id="inputName" name="inputName" placeholder="山田 太郎" required disabled>
+                            <div class="invalid-feedback">お名前を入力してください。</div>
+                        </div>
 
-                <div class="col-md-6">
-                    <label for="inputCompany" class="form-label small">所属企業・組織名</label>
-                    <input type="text" class="form-control" id="inputCompany" placeholder="株式会社〇〇">
-                </div>
+                        <div class="col-md-6">
+                            <label for="inputCompany" class="form-label small">所属企業・組織名</label>
+                            <input value="デバッグ用" type="text" class="form-control js-conditional-input" id="inputCompany" name="inputCompany" placeholder="株式会社〇〇" disabled>
+                        </div>
 
-                <div class="col-12">
-                    <label for="inputEmail" class="form-label small">メールアドレス <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" required>
-                    <div class="invalid-feedback">有効なメールアドレスを入力してください。</div>
-                </div>
-                <div class="col-12" style="position: absolute; left: -9999px; visibility: hidden; height: 1px; overflow: hidden;">
-                    <label for="trapField" class="form-label small">このフィールドは空欄にしてください</label>
-                    <input type="text" class="form-control" id="trapField" name="website_url" tabindex="-1" autocomplete="off" value="">
-                </div>
-                <div class="col-12">
-                    <label for="inputSubject" class="form-label small">件名 <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="inputSubject" placeholder="〇〇に関するお問い合わせ" required>
-                    <div class="invalid-feedback">件名を入力してください。</div>
-                </div>
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label small">メールアドレス <span class="text-danger">*</span></label>
+                            <input value="sample@example.com" type="email" class="form-control js-conditional-input" id="inputEmail" name="inputEmail" placeholder="name@example.com" required disabled>
+                            <div class="invalid-feedback">有効なメールアドレスを入力してください。</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputSubject" class="form-label small">件名 <span class="text-danger">*</span></label>
+                            <input value="デバッグ用" type="text" class="form-control js-conditional-input" id="inputSubject" name="inputSubject" placeholder="〇〇に関するお問い合わせ" required disabled>
+                            <div class="invalid-feedback">件名を入力してください。</div>
+                        </div>
 
-                <div class="col-12">
-                    <label for="inputMessage" class="form-label small">内容 <span class="text-danger">*</span></label>
-                    <textarea class="form-control" id="inputMessage" rows="5" placeholder="お問い合わせ内容を詳しくご記入ください" required></textarea>
-                    <div class="invalid-feedback">内容を入力してください。</div>
-                </div>
+                        <div class="col-12">
+                            <label for="inputMessage" class="form-label small">内容 <span class="text-danger">*</span></label>
+                            <textarea value="デバッグ用" class="form-control js-conditional-input" id="inputMessage" name="inputMessage" rows="5" placeholder="お問い合わせ内容を詳しくご記入ください" required disabled></textarea>
+                            <div class="invalid-feedback">内容を入力してください。</div>
+                        </div>
 
-                <div class="col-12 text-center mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg px-5">
-                        <i class="bi bi-send-fill me-2"></i> 送信
-                    </button>
-                </div>
-            </fieldset>
-        </form>
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 js-conditional-input" disabled>
+                                <i class="bi bi-send-fill me-2"></i> 送信
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -462,6 +450,16 @@
             </div>
         </div>
     </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <div id="contactToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i id="toastIcon" class="bi me-2"></i>
+                <strong class="me-auto" id="toastTitle"></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastBody"></div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
