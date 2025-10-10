@@ -1,5 +1,6 @@
 <?php
 set_time_limit(30);
+require_once __DIR__ . '/secrets.php';
 require_once __DIR__ . '/origin.php'; 
 //header('Access-Control-Allow-Origin: *'); 
 header('Content-Type: application/json');
